@@ -1,6 +1,6 @@
 from fastapi import FastAPI # type: ignore
 import os
-from app.Common.Database.moels import Base
+from app.Common.Database.models import Base
 from typing import Annotated, List
 
 app = FastAPI()
