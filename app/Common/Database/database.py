@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base, sessionmaker
 base = declarative_base()
+DATABASE_URL = "postgresql://falsafwan002:Passw0rd@localhost:5432/smart_library"
 class Books(base):
     __tablename__= 'books'
 
@@ -39,8 +40,6 @@ class UserPreferences(base):
     user = relationship('Users', back_populates='UserPreferences')
     bookrelation = relationship('Books', back_populates='UserPreferences')
 
-
-DATABASE_URL = "postgresql+psycopg2://falsafwan002:your_password@localhost:5432/smartlibrary"
 
 engine = create_engine(DATABASE_URL)
 
