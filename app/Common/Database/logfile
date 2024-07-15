@@ -1,0 +1,135 @@
+2024-07-15 16:22:40.736 +03 [9966] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:22:40.738 +03 [9966] LOG:  listening on IPv6 address "::1", port 5432
+2024-07-15 16:22:40.738 +03 [9966] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-15 16:22:40.744 +03 [9966] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-07-15 16:22:40.755 +03 [9969] LOG:  database system was shut down at 2024-07-15 16:22:33 +03
+2024-07-15 16:22:40.757 +03 [9966] LOG:  database system is ready to accept connections
+2024-07-15 16:22:57.122 +03 [10385] FATAL:  database "falsafwan002" does not exist
+2024-07-15 16:27:00.581 +03 [13616] FATAL:  lock file "postmaster.pid" already exists
+2024-07-15 16:27:00.581 +03 [13616] HINT:  Is another postmaster (PID 9966) running in data directory "/opt/homebrew/var/postgresql@16"?
+2024-07-15 16:27:40.764 +03 [9967] LOG:  checkpoint starting: time
+2024-07-15 16:27:45.061 +03 [9967] LOG:  checkpoint complete: wrote 45 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.272 s, sync=0.004 s, total=4.298 s; sync files=11, longest=0.002 s, average=0.001 s; distance=269 kB, estimate=269 kB; lsn=0/154F128, redo lsn=0/154F0F0
+2024-07-15 16:28:49.350 +03 [9966] LOG:  received fast shutdown request
+2024-07-15 16:28:49.350 +03 [9966] LOG:  aborting any active transactions
+2024-07-15 16:28:49.351 +03 [9966] LOG:  background worker "logical replication launcher" (PID 9972) exited with exit code 1
+2024-07-15 16:28:49.351 +03 [9967] LOG:  shutting down
+2024-07-15 16:28:49.351 +03 [9967] LOG:  checkpoint starting: shutdown immediate
+2024-07-15 16:28:49.359 +03 [9967] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.008 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=242 kB; lsn=0/154F1D8, redo lsn=0/154F1D8
+2024-07-15 16:28:49.362 +03 [9966] LOG:  database system is shut down
+2024-07-15 16:29:36.229 +03 [16122] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:29:36.232 +03 [16122] LOG:  listening on IPv6 address "::1", port 5432
+2024-07-15 16:29:36.232 +03 [16122] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-15 16:29:36.235 +03 [16122] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-07-15 16:29:36.246 +03 [16125] LOG:  database system was shut down at 2024-07-15 16:28:49 +03
+2024-07-15 16:29:36.255 +03 [16122] LOG:  database system is ready to accept connections
+2024-07-15 16:31:09.548 +03 [17358] FATAL:  lock file "postmaster.pid" already exists
+2024-07-15 16:31:09.548 +03 [17358] HINT:  Is another postmaster (PID 16122) running in data directory "/opt/homebrew/var/postgresql@16"?
+2024-07-15 16:31:37.536 +03 [16122] LOG:  received fast shutdown request
+2024-07-15 16:31:37.537 +03 [16122] LOG:  aborting any active transactions
+2024-07-15 16:31:37.538 +03 [16122] LOG:  background worker "logical replication launcher" (PID 16128) exited with exit code 1
+2024-07-15 16:31:37.538 +03 [16123] LOG:  shutting down
+2024-07-15 16:31:37.538 +03 [16123] LOG:  checkpoint starting: shutdown immediate
+2024-07-15 16:31:37.555 +03 [16123] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.007 s, total=0.018 s; sync files=2, longest=0.006 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/154F288, redo lsn=0/154F288
+2024-07-15 16:31:37.557 +03 [16122] LOG:  database system is shut down
+2024-07-15 16:31:42.140 +03 [18007] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:31:42.141 +03 [18007] LOG:  listening on IPv6 address "::1", port 5432
+2024-07-15 16:31:42.141 +03 [18007] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-15 16:31:42.142 +03 [18007] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-07-15 16:31:42.150 +03 [18010] LOG:  database system was shut down at 2024-07-15 16:31:37 +03
+2024-07-15 16:31:42.157 +03 [18007] LOG:  database system is ready to accept connections
+2024-07-15 16:31:49.782 +03 [18073] FATAL:  role "postgres" does not exist
+2024-07-15 16:32:10.595 +03 [18412] FATAL:  database "falsafwan002" does not exist
+2024-07-15 16:33:17.834 +03 [18844] ERROR:  syntax error at or near ";" at character 30
+2024-07-15 16:33:17.834 +03 [18844] STATEMENT:  CREATE DATABASE Smart library;
+2024-07-15 16:34:29.923 +03 [18007] LOG:  received fast shutdown request
+2024-07-15 16:34:29.923 +03 [18007] LOG:  aborting any active transactions
+2024-07-15 16:34:29.925 +03 [18007] LOG:  background worker "logical replication launcher" (PID 18013) exited with exit code 1
+2024-07-15 16:34:29.925 +03 [18008] LOG:  shutting down
+2024-07-15 16:34:29.926 +03 [18008] LOG:  checkpoint starting: shutdown immediate
+2024-07-15 16:34:30.024 +03 [18008] LOG:  checkpoint complete: wrote 945 buffers (5.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.079 s, sync=0.015 s, total=0.099 s; sync files=305, longest=0.001 s, average=0.001 s; distance=4337 kB, estimate=4337 kB; lsn=0/198B950, redo lsn=0/198B950
+2024-07-15 16:34:30.030 +03 [18007] LOG:  database system is shut down
+2024-07-15 16:34:36.480 +03 [20515] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:34:36.482 +03 [20515] LOG:  could not bind IPv6 address "::1": Address already in use
+2024-07-15 16:34:36.482 +03 [20515] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:34:36.482 +03 [20515] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-07-15 16:34:36.482 +03 [20515] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:34:36.482 +03 [20515] WARNING:  could not create listen socket for "localhost"
+2024-07-15 16:34:36.482 +03 [20515] FATAL:  could not create any TCP/IP sockets
+2024-07-15 16:34:36.482 +03 [20515] LOG:  database system is shut down
+2024-07-15 16:36:30.688 +03 [22234] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:36:30.690 +03 [22234] LOG:  listening on IPv6 address "::1", port 5432
+2024-07-15 16:36:30.690 +03 [22234] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-15 16:36:30.692 +03 [22234] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-07-15 16:36:30.706 +03 [22237] LOG:  database system was shut down at 2024-07-15 16:34:30 +03
+2024-07-15 16:36:30.717 +03 [22234] LOG:  database system is ready to accept connections
+2024-07-15 16:41:01.192 +03 [22234] LOG:  received fast shutdown request
+2024-07-15 16:41:01.192 +03 [22234] LOG:  aborting any active transactions
+2024-07-15 16:41:01.193 +03 [22234] LOG:  background worker "logical replication launcher" (PID 22240) exited with exit code 1
+2024-07-15 16:41:01.193 +03 [22235] LOG:  shutting down
+2024-07-15 16:41:01.194 +03 [22235] LOG:  checkpoint starting: shutdown immediate
+2024-07-15 16:41:01.215 +03 [22235] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.010 s, total=0.022 s; sync files=2, longest=0.007 s, average=0.005 s; distance=0 kB, estimate=0 kB; lsn=0/198BA00, redo lsn=0/198BA00
+2024-07-15 16:41:01.218 +03 [22234] LOG:  database system is shut down
+2024-07-15 16:41:05.526 +03 [25629] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:41:05.527 +03 [25629] LOG:  could not bind IPv6 address "::1": Address already in use
+2024-07-15 16:41:05.527 +03 [25629] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:41:05.527 +03 [25629] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-07-15 16:41:05.527 +03 [25629] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:41:05.527 +03 [25629] WARNING:  could not create listen socket for "localhost"
+2024-07-15 16:41:05.528 +03 [25629] FATAL:  could not create any TCP/IP sockets
+2024-07-15 16:41:05.528 +03 [25629] LOG:  database system is shut down
+2024-07-15 16:42:15.843 +03 [26530] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:42:15.845 +03 [26530] LOG:  could not bind IPv6 address "::1": Address already in use
+2024-07-15 16:42:15.845 +03 [26530] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:42:15.845 +03 [26530] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-07-15 16:42:15.845 +03 [26530] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:42:15.845 +03 [26530] WARNING:  could not create listen socket for "localhost"
+2024-07-15 16:42:15.845 +03 [26530] FATAL:  could not create any TCP/IP sockets
+2024-07-15 16:42:15.846 +03 [26530] LOG:  database system is shut down
+2024-07-15 16:43:07.169 +03 [27328] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:43:07.171 +03 [27328] LOG:  could not bind IPv6 address "::1": Address already in use
+2024-07-15 16:43:07.171 +03 [27328] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:43:07.171 +03 [27328] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-07-15 16:43:07.171 +03 [27328] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:43:07.171 +03 [27328] WARNING:  could not create listen socket for "localhost"
+2024-07-15 16:43:07.171 +03 [27328] FATAL:  could not create any TCP/IP sockets
+2024-07-15 16:43:07.172 +03 [27328] LOG:  database system is shut down
+2024-07-15 16:45:15.758 +03 [29017] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:45:15.760 +03 [29017] LOG:  could not bind IPv6 address "::1": Address already in use
+2024-07-15 16:45:15.760 +03 [29017] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:45:15.760 +03 [29017] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-07-15 16:45:15.760 +03 [29017] HINT:  Is another postmaster already running on port 8080? If not, wait a few seconds and retry.
+2024-07-15 16:45:15.760 +03 [29017] WARNING:  could not create listen socket for "localhost"
+2024-07-15 16:45:15.760 +03 [29017] FATAL:  could not create any TCP/IP sockets
+2024-07-15 16:45:15.760 +03 [29017] LOG:  database system is shut down
+2024-07-15 16:47:30.191 +03 [30754] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:47:30.193 +03 [30754] LOG:  listening on IPv6 address "::1", port 5432
+2024-07-15 16:47:30.193 +03 [30754] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-15 16:47:30.197 +03 [30754] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-07-15 16:47:30.220 +03 [30757] LOG:  database system was shut down at 2024-07-15 16:41:01 +03
+2024-07-15 16:47:30.240 +03 [30754] LOG:  database system is ready to accept connections
+2024-07-15 16:48:09.376 +03 [31539] FATAL:  password authentication failed for user "falsafwan002"
+2024-07-15 16:48:09.376 +03 [31539] DETAIL:  User "falsafwan002" has no password assigned.
+	Connection matched file "/opt/homebrew/var/postgresql@16/pg_hba.conf" line 121: "host    all             all             ::1/128                 md5"
+2024-07-15 16:50:20.326 +03 [33236] FATAL:  lock file "postmaster.pid" already exists
+2024-07-15 16:50:20.326 +03 [33236] HINT:  Is another postmaster (PID 30754) running in data directory "/opt/homebrew/var/postgresql@16"?
+2024-07-15 16:50:51.124 +03 [30754] LOG:  received smart shutdown request
+2024-07-15 16:50:51.127 +03 [30754] LOG:  background worker "logical replication launcher" (PID 30760) exited with exit code 1
+2024-07-15 16:50:51.127 +03 [30755] LOG:  shutting down
+2024-07-15 16:50:51.127 +03 [30755] LOG:  checkpoint starting: shutdown immediate
+2024-07-15 16:50:51.157 +03 [30755] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.009 s, sync=0.007 s, total=0.030 s; sync files=2, longest=0.005 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/198BAB0, redo lsn=0/198BAB0
+2024-07-15 16:50:51.159 +03 [30754] LOG:  database system is shut down
+2024-07-15 16:51:16.002 +03 [33771] LOG:  starting PostgreSQL 16.3 (Homebrew) on aarch64-apple-darwin23.4.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2024-07-15 16:51:16.003 +03 [33771] LOG:  listening on IPv6 address "::1", port 5432
+2024-07-15 16:51:16.004 +03 [33771] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-15 16:51:16.010 +03 [33771] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-07-15 16:51:16.023 +03 [33774] LOG:  database system was shut down at 2024-07-15 16:50:51 +03
+2024-07-15 16:51:16.032 +03 [33771] LOG:  database system is ready to accept connections
+2024-07-15 16:51:28.866 +03 [34272] FATAL:  password authentication failed for user "falsafwan002"
+2024-07-15 16:51:28.866 +03 [34272] DETAIL:  User "falsafwan002" has no password assigned.
+	Connection matched file "/opt/homebrew/var/postgresql@16/pg_hba.conf" line 121: "host    all             all             ::1/128                 md5"
+2024-07-15 16:52:26.217 +03 [33771] LOG:  received smart shutdown request
+2024-07-15 16:52:26.222 +03 [33771] LOG:  background worker "logical replication launcher" (PID 33777) exited with exit code 1
+2024-07-15 16:52:26.222 +03 [33772] LOG:  shutting down
+2024-07-15 16:52:26.223 +03 [33772] LOG:  checkpoint starting: shutdown immediate
+2024-07-15 16:52:26.242 +03 [33772] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.008 s, total=0.020 s; sync files=3, longest=0.005 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/198BB60, redo lsn=0/198BB60
+2024-07-15 16:52:26.244 +03 [33771] LOG:  database system is shut down
