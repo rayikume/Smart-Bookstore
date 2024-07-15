@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base, sessionmaker
-base = declarative_base()
-DATABASE_URL = "postgresql://falsafwan002:Passw0rd@localhost:5432/smart_library"
-class Books(base):
+from app.Common.Database.db_connection import Base
+
+class Books(Base):
     __tablename__= 'books'
 
     title= Column(String, index=True)
@@ -11,7 +11,7 @@ class Books(base):
     description = Column(String, index=True)
     author = relationship('Authors', back_populates='Books')
 
-class Authors(base):
+class Authors(Base):
     __tablename__= 'authors'
 
     name= Column(String, primary_key=True, index=True)
@@ -20,7 +20,7 @@ class Authors(base):
     description = Column(Integer, primary_key=True, index=True)
     books = relationship('Books', back_populates='Authors')
 
-class Users(base):
+class Users(Base):
     __tablename__= 'users'
 
     username= Column(String, primary_key=True, index=True)
@@ -30,7 +30,7 @@ class Users(base):
     preferences = relationship('UserPreferences', back_populates='Users')
 
 
-class UserPreferences(base):
+class UserPreferences(Base):
     __tablename__= 'userpreferences'
 
     preferences= Column(String, primary_key=True, index=True)
@@ -39,13 +39,3 @@ class UserPreferences(base):
     description = Column(Integer, primary_key=True, index=True)
     user = relationship('Users', back_populates='UserPreferences')
     bookrelation = relationship('Books', back_populates='UserPreferences')
-
-
-engine = create_engine(DATABASE_URL)
-
-base.metadata.create_all(engine)
-
-Session = sessionmaker(bind=engine)
-session = Session()
-
-

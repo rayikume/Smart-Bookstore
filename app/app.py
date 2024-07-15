@@ -1,5 +1,7 @@
 from fastapi import FastAPI # type: ignore
 import os
+from app.Common.Database.moels import Base
+from typing import Annotated, List
 
 app = FastAPI()
 
@@ -10,3 +12,6 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
+
+
+
