@@ -35,5 +35,6 @@ class User(Base):
 class UserPreference(Base):
     __tablename__ = 'user_preferences'
     # user name have prefrence1, prefrence5
+    id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
     book_id = Column(Integer, ForeignKey('books.id'), nullable=False)
