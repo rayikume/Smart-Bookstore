@@ -1,5 +1,5 @@
-from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
-from sqlalchemy.orm import relationship, declarative_base, sessionmaker
+from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey # type: ignore
+from sqlalchemy.orm import relationship, declarative_base, sessionmaker # type: ignore
 from app.Common.Database.db_connection import Base
 
 class Books(Base):
@@ -14,7 +14,7 @@ class Books(Base):
 class Authors(Base):
     __tablename__= 'authors'
 
-    name= Column(String, primary_key=True, index=True)
+    author_name= Column(String, primary_key=True, index=True)
     biography = Column(String, index=True)
     genre = Column(Integer, primary_key=True, index=True)
     description = Column(Integer, primary_key=True, index=True)
