@@ -8,8 +8,8 @@ from db_connection import get_db_connection
 # (book :Books) -> Books will be the schema for Books, 
 # (Books.author_id == author_id) -> change the primary key to book_id
 class UpdateBook:
-    def update_book(author_id: int, book :Books ,db :Session =Depends(get_db_connection)):
-        update_book = db.query(Books).filter(Books.author_id == author_id)
+    def update_book(book_id: int, book :Books ,db :Session =Depends(get_db_connection)):
+        update_book = db.query(Books).filter(Books.book_id == book_id)
         update_book.first()
         if update_book == None:
             raise HTTPException (status_code=status.HTTP_404_NOT_FOUND, detail=f"Book does not exist")
@@ -17,6 +17,7 @@ class UpdateBook:
             update_book.update(book.dict(),synchronize_session=False)
             db.commit()
         return update_book.first()
+    print ("hi ")
 
 # will change : 
 # (auther :Authors) -> Authors will be the schema for Authors, 
