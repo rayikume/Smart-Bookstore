@@ -1,47 +1,35 @@
 from pydantic import BaseModel
-
+from app.Common.Database.models import *
 class user(BaseModel):
-    def userSchema():
-        return {
-            "username": "string",
-            "email": "string",
-            "password": "string",
-            "role" : "String",
-            "description":"String",
-            "preferences": "String"
-
-        }
+    username: str
+    email: str
+    password: str
+    role : str
+    description:str
+    preferences: str
 
 
 class book(BaseModel):
-    def bookSchema():
-        return {
-            "book_id": "string",
-            "title": "string",
-            "author_id": "integer",
-            "genre": "string",
-            "description": "string",
-            "author": "string"
-        }
+    book_id: str
+    title: str
+    author_id: int
+    genre: str
+    description: str
+    author: str
 
 
 class author(BaseModel):
-    def authorSchema():
-        return {
-            "author_name": "string",
-            "biography": "string",
-            "genre": "integer",
-            "description": "string",
-            "books": "string"
-        }
+    author_name: str
+    biography: str
+    genre: int
+    description: str
+    books: str
+
 
 
 class userPreference(BaseModel):
-    def userPreferenceSchema():
-        return {
-            "preferences": "string",
-            "username": "string",
-            "author_id": "integer",
-            "genre": "integer",
-            "description": "string"
-        }
+    preferences: str
+    username: str
+    author_id: str
+    genre: int
+    description: str
