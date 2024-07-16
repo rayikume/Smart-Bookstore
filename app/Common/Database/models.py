@@ -1,16 +1,15 @@
-from sqlalchemy import Column, Integer, String, Text, ForeignKey
-from sqlalchemy.orm import relationship, declarative_base
+from sqlalchemy import Column, Integer, String, Text, ForeignKey 
+from sqlalchemy.orm import relationship
+from app.Common.Database.db_connection import Base
 
-Base = declarative_base()
-
-class Author(Base):
-    __tablename__ = 'authors'
-    
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String, nullable=False)
-    biography = Column(Text, nullable=True)
-
-    books = relationship('Book', back_populates='author')
+class Books(Base):
+    __tablename__= 'books'
+    book_id = Column(Integer , primary_key=True, index = True)
+    title= Column(String, index=True)
+    author_id = Column(Integer, ForeignKey("author_id"), index=True)
+    genre = Column(String, index=True)
+    description = Column(Text, index=True)
+    author = relationship('Authors', back_populates='Books')
 
 class Book(Base):
     __tablename__ = 'books'
@@ -38,8 +37,12 @@ class User(Base):
 class UserPreference(Base):
     __tablename__ = 'user_preferences'
     
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
-    preference = Column(Text, nullable=True)  
+    preferences= Column(String,  index=True)
+    username = Column(String, ForeignKey("username"), index=True)
+    author_id = Column(Integer, ForeignKey("author_id"), index=True)
+    genre = Column(Integer, index=True)
+    description = Column(Text,  index=True)
+    preferences = relationship('Books', back_populates='UserPreferences')
 
-    user = relationship('User', back_populates='preferences')
+
+    
