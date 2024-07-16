@@ -26,7 +26,7 @@ class Users(Base):
     username= Column(String, primary_key=True, index=True)
     password = Column(String, index=True)
     role = Column(String, index=True)
-    description = Column(Text,  index=True)
+    description = Column(String,  index=True)
     preferences = relationship('UserPreferences', back_populates='Users')
 
 
