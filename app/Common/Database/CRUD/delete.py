@@ -7,7 +7,6 @@ from db_connection import get_db_connection
 
 # will change : 
 # (book :Books) -> Books will be the schema for Books, 
-# (Books.author_id == author_id) -> change the primary key to book_id
 class DeleteBook:
     def delete_book(author_id: int, book :Books ,db :Session =Depends(get_db_connection)):
         delete_book = db.query(Books).filter(Books.author_id == author_id)
@@ -20,10 +19,9 @@ class DeleteBook:
 
 # will change : 
 # (auther :Authors) -> Authors will be the schema for Authors, 
-# (Authors.name == name) -> change the primary key to auther_id
 class DeleteAuthor:
-    def delete_auther(name : str , auther :Authors,db :Session =Depends(get_db_connection)):
-        delete_author = db.query(Authors).filter(Authors.name == name)
+    def delete_auther(author_id : str , auther :Authors,db :Session =Depends(get_db_connection)):
+        delete_author = db.query(Authors).filter(Authors.author_id == author_id)
         if delete_author == None:
             raise HTTPException (status_code=status.HTTP_404_NOT_FOUND, detail=f"Author does not exist")
         else:
@@ -47,8 +45,8 @@ class DeleteUser:
 # (user_preference :UserPreferences) -> UserPreferences will be the schema for User Preferences, 
 # (UserPreferences.preferences == preferences)   -> change the primary key
 class DeleteUserPreference:
-    def delete_user_preference( preferences: str , user_preference :UserPreferences,db :Session =Depends(get_db_connection)):
-        delete_user_preference = db.query(UserPreferences).filter(UserPreferences.preferences == preferences) 
+    def delete_user_preference( username: str , user_preference :UserPreferences,db :Session =Depends(get_db_connection)):
+        delete_user_preference = db.query(UserPreferences).filter(UserPreferences.username == username) 
         if delete_user_preference == None:
             raise HTTPException (status_code=status.HTTP_404_NOT_FOUND, detail=f"User preferences does not exist")
         else:
