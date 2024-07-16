@@ -39,6 +39,7 @@ class UserPreferences(Base):
     author_id = Column(Integer, ForeignKey("author_id"), index=True)
     genre = Column(Integer, index=True)
     description = Column(Text,  index=True)
-    #should have the relationship
+    preferences = relationship('Books', back_populates='UserPreferences')
+
 
     
