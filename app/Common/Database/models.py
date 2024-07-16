@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey
-from db_connection import *
+from Common.Database.db_connection import Base
 
 
 class Author(Base):
