@@ -6,7 +6,7 @@ router = APIRouter()
 books = []
 
 @router.get("/")
-async def get_all_books():
+def get_all_books():
     return {"Books": books}
 
 @router.post("/")
