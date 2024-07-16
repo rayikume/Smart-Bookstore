@@ -4,7 +4,7 @@ from app.Common.Database.db_connection import Base
 
 class Books(Base):
     __tablename__= 'books'
-    book_id = Column(String , primary_key=True, index = True)
+    book_id = Column(Integer , primary_key=True, index = True)
     title= Column(String, index=True)
     author_id = Column(Integer, ForeignKey("author_id"), index=True)
     genre = Column(String, index=True)
@@ -14,7 +14,8 @@ class Books(Base):
 class Authors(Base):
     __tablename__= 'authors'
 
-    author_name= Column(String, primary_key=True, index=True)
+    author_id = Column(Integer, primary_key=True, index=True)
+    author_name= Column(String, index=True)
     biography = Column(String, index=True)
     genre = Column(Integer, index=True)
     description = Column(Text,  index=True)
@@ -26,7 +27,7 @@ class Users(Base):
     username= Column(String, primary_key=True, index=True)
     password = Column(String, index=True)
     role = Column(String, index=True)
-    description = Column(String,  index=True)
+    description = Column(Text,  index=True)
     preferences = relationship('UserPreferences', back_populates='Users')
 
 
@@ -38,3 +39,6 @@ class UserPreferences(Base):
     author_id = Column(Integer, ForeignKey("author_id"), index=True)
     genre = Column(Integer, index=True)
     description = Column(Text,  index=True)
+    #should have the relationship
+
+    
