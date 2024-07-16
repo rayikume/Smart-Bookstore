@@ -1,4 +1,4 @@
-from app.Common.Database.models import * 
+from models import * 
 from sqlalchemy.orm import relationship
 books = relationship('Book', back_populates='authors')
 author = relationship('Author', back_populates='books')

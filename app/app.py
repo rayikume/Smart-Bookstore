@@ -6,6 +6,7 @@ from Common.Database.db_connection import *
 app = FastAPI()
 
 app.include_router(book_router, prefix="/books")
+Base.metadata.create_all(bind= engine)
 
 @app.get("/")
 def read_root():
