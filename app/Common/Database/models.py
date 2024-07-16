@@ -4,9 +4,9 @@ from app.Common.Database.db_connection import Base
 
 class Books(Base):
     __tablename__= 'books'
-
+    book_id = Column(String , primary_key=True, index = True)
     title= Column(String, index=True)
-    author_id = Column(Integer, primary_key=True, index=True)
+    author_id = Column(Integer, ForeignKey("author_id"), index=True)
     genre = Column(String, index=True)
     description = Column(String, index=True)
     author = relationship('Authors', back_populates='Books')
