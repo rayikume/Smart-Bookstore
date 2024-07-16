@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import declarative_base
+from db_connection import *
 
-Base = declarative_base()
 
 class Author(Base):
     __tablename__ = 'authors'
@@ -38,3 +38,5 @@ class UserPreference(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
     book_id = Column(Integer, ForeignKey('books.id'), nullable=False)
+
+Base.metadata.create_all(bind= engine)

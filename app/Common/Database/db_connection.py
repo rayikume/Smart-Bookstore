@@ -5,7 +5,7 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from sqlalchemy.orm import Session , declarative_base
 
-URL_DATABASE = "postgresql://postgres:aalkathami001:Passw0rd@localhost:5432/smart_library"
+URL_DATABASE = "postgresql://postgres:aalkathami001:Passw0rd@localhost:5432/postgres"
 # URL_DATABASE = "postgresql://falsafwan002:Passw0rd@localhost:5432/smart_library"
 engine = create_engine(URL_DATABASE)
 
