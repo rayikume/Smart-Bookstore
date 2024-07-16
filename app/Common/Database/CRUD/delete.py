@@ -7,9 +7,10 @@ from db_connection import get_db_connection
 
 # will change : 
 # (book :Books) -> Books will be the schema for Books, 
+# DELETE /books/:id: Delete a book record by its ID (Admin only).
 class DeleteBook:
-    def delete_book(author_id: int, book :Books ,db :Session =Depends(get_db_connection)):
-        delete_book = db.query(Books).filter(Books.author_id == author_id)
+    def delete_book(book_id: int, book :Books ,db :Session =Depends(get_db_connection)):
+        delete_book = db.query(Books).filter(Books.book_id == book_id)
         if delete_book == None:
             raise HTTPException (status_code=status.HTTP_404_NOT_FOUND, detail=f"Book does not exist")
         else:
@@ -19,8 +20,9 @@ class DeleteBook:
 
 # will change : 
 # (auther :Authors) -> Authors will be the schema for Authors, 
+# DELETE /authors/:id: Delete an author record by their ID (Admin only).
 class DeleteAuthor:
-    def delete_auther(author_id : str , auther :Authors,db :Session =Depends(get_db_connection)):
+    def delete_auther(author_id : int , auther :Authors,db :Session =Depends(get_db_connection)):
         delete_author = db.query(Authors).filter(Authors.author_id == author_id)
         if delete_author == None:
             raise HTTPException (status_code=status.HTTP_404_NOT_FOUND, detail=f"Author does not exist")

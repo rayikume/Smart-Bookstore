@@ -3,7 +3,7 @@ from fastapi import FastAPI , Depends
 from sqlalchemy.orm import Session
 from db_connection import get_db_connection
 
-
+#POST /books: Create a new book record (Admin only).
 class CreateBook:
     def create_book(book :Books,db :Session =Depends(get_db_connection)):
         new_book = Books(**book.dict())
@@ -12,6 +12,7 @@ class CreateBook:
         db.refresh(new_book)
         return new_book
 
+#POST /authors: Create a new author record (Admin only).   
 class CreateAuthor:
     def create_auther(auther :Authors,db :Session =Depends(get_db_connection)):
         new_author = Authors(**auther.dict())
@@ -19,7 +20,8 @@ class CreateAuthor:
         db.commit()
         db.refresh(new_author)
         return new_author
-    
+
+# POST /users/register: Register a new user.
 class CreateUser:
     def create_user(user :Users,db :Session =Depends(get_db_connection)):
         new_user = Users(**user.dict())
