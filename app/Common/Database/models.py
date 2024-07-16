@@ -10,7 +10,7 @@ class Author(Base):
     name = Column(String, nullable=False)
     biography = Column(Text, nullable=True)
 
-    books = relationship('Book', back_populates='author')
+    books = relationship('Book', back_populates='authors')
 
 class Book(Base):
     __tablename__ = 'books'
@@ -33,13 +33,14 @@ class User(Base):
     role = Column(String, nullable=False)
     description = Column(Text, nullable=True)
 
-    preferences = relationship('UserPreference', back_populates='user')
+    preferences = relationship('UserPreference', back_populates='users')
 
 class UserPreference(Base):
     __tablename__ = 'user_preferences'
     
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
+    book_id = Column(Integer, ForeignKey('books.id'), nullable=False)
     preference = Column(Text, nullable=True)  
-
-    user = relationship('User', back_populates='preferences')
+    user = relationship('User', back_populates='user_preferences')
+    books = relationship('Book', back_populates='user_preferences')
