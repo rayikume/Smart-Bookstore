@@ -1,6 +1,6 @@
 from fastapi import FastAPI # type: ignore
 import os
-from app.Common.Database.models import Base
+from Common.Database.models import Base
 from typing import Annotated, List
 
 app = FastAPI()
@@ -14,7 +14,7 @@ def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
 
 from fastapi import FastAPI # type: ignore
-from Schemas.book import Book
+from Common.Schemas.schemas import Book
 import os
 
 books = []

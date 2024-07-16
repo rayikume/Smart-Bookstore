@@ -2,6 +2,7 @@ from  app.Common.Database.models import *
 from fastapi import FastAPI , Depends, HTTPException ,status, Response
 from sqlalchemy.orm import Session
 from db_connection import get_db_connection
+from models import *
 
 
 

@@ -29,3 +29,5 @@ class UserPreferenceSchema(BaseModel):
     author_id: str
     genre: int
     description: str
+
+
