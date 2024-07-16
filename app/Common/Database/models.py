@@ -5,7 +5,7 @@ Base = declarative_base()
 
 class Author(Base):
     __tablename__ = 'authors'
-    
+
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String, nullable=False)
     biography = Column(Text, nullable=True)
@@ -31,8 +31,6 @@ class User(Base):
     email = Column(String, nullable=False, unique=True)
     password_hash = Column(String, nullable=False)
     role = Column(String, nullable=False)
-    description = Column(Text, nullable=True)
-
     preferences = relationship('UserPreference', back_populates='users')
 
 class UserPreference(Base):
