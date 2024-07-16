@@ -1,12 +1,12 @@
 from fastapi import Depends
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
 from typing import Annotated
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session , declarative_base
 
 URL_DATABASE = "postgresql://aalkathami001:Passw0rd@localhost:5432/smart_library"
 
+engine= create_engine(URL_DATABASE) 
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
