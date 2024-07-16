@@ -5,11 +5,11 @@ Base = declarative_base()
 
 class Author(Base):
     __tablename__ = 'authors'
-
     id = Column(Integer, primary_key=True, autoincrement=True)
+    book_id= Column(Integer, ForeignKey('books.id'), nullable=False)
     name = Column(String, nullable=False)
     biography = Column(Text, nullable=True)
-
+    genre = Column(String, nullable=True)
 
 
 class Book(Base):
@@ -24,6 +24,7 @@ class Book(Base):
 
 class User(Base):
     __tablename__ = 'users'
+    
     id = Column(Integer, primary_key=True, autoincrement=True)
     username = Column(String, nullable=False, unique=True)
     email = Column(String, nullable=False, unique=True)
@@ -33,8 +34,6 @@ class User(Base):
 
 class UserPreference(Base):
     __tablename__ = 'user_preferences'
-    
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    # user name have prefrence1, prefrence5
     user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
     book_id = Column(Integer, ForeignKey('books.id'), nullable=False)
-    preference = Column(Text, nullable=True)  
