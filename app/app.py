@@ -8,6 +8,7 @@ app = FastAPI()
 
 app.include_router(book_router, prefix="/books")
 app.include_router(recommendation_router, prefix="/recommendations")
+Base.metadata.create_all(bind= engine)
 
 @app.get("/")
 def read_root():
