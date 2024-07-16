@@ -1,24 +1,22 @@
 from fastapi import Depends
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.orm import declarative_base  # Use the updated import path
 from typing import Annotated
-from sqlalchemy.orm import Session
 
+URL_DATABASE = "postgresql://falsafwan002:Passw0rd@localhost:5432/smart_library"
 
-URL_DATABASE= "postgresql://falsafwan002:Passw0rd@localhost:5432/smart_library"
+engine = create_engine(URL_DATABASE)
 
-engine= create_engine(URL_DATABASE) 
-
-session_local= sessionmaker(bind= engine , autoflush= False, autocommit = False) 
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-def get_db_connection():
-    db = session_local()
+def get_db():
+    db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
 
-db_dependencies= Annotated[Session, Depends(get_db_connection)]
+db_dependencies = Annotated[Session, Depends(get_db)]

@@ -1,15 +1,14 @@
 from pydantic import BaseModel
-from app.Common.Database.models import *
-class user(BaseModel):
+
+class UserSchema(BaseModel):
     username: str
     email: str
     password: str
-    role : str
-    description:str
+    role: str
+    description: str
     preferences: str
 
-
-class book(BaseModel):
+class BookSchema(BaseModel):
     book_id: str
     title: str
     author_id: int
@@ -17,17 +16,14 @@ class book(BaseModel):
     description: str
     author: str
 
-
-class author(BaseModel):
+class AuthorSchema(BaseModel):
     author_name: str
     biography: str
     genre: int
     description: str
     books: str
 
-
-
-class userPreference(BaseModel):
+class UserPreferenceSchema(BaseModel):
     preferences: str
     username: str
     author_id: str
