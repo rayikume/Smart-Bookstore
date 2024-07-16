@@ -16,12 +16,13 @@ def read_item(item_id: int, q: str = None):
 from fastapi import FastAPI # type: ignore
 from Common.Schemas.schemas import Book
 import os
+from typing import Annotated, List
+from Common.Database.db_connection import *
 
 books = []
 
 app = FastAPI()
-
-@app.get("/")
+Base.metadata.create_all(bind=engine)
 def read_root():
     return {"Hello": "World"}
 

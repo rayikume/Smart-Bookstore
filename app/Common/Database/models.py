@@ -40,6 +40,6 @@ class UserPreference(Base):
     
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
-    preference = Column(Text, nullable=True)  # Can be JSON if using a PostgreSQL JSON field
+    preference = Column(Text, nullable=True)  
 
     user = relationship('User', back_populates='preferences')
